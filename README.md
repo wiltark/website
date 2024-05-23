@@ -11,7 +11,6 @@
 <div align="center">
     <a href="https://aoi.js.org/invite">Discord</a> |
     <a href="https://aoi.js.org/">Documentation</a> <br /> <br />
-    <a href="https://starlight.astro.build"><img src="https://astro.badg.es/v2/built-with-starlight/tiny.svg" alt="Built with Starlight" width="140" height="20"></a>
 </div>
 </div>
 <br />
@@ -78,11 +77,11 @@ client.command({
 
 ## 🐛 Contribution
 
-[Refer to contribution documentation for more information](https://github.com/AkaruiDevelopment/aoi.js/blob/v6/.github/CONTRIBUTING.md)
+[Refer to contribution documentation for more information](https://github.com/aoijs/aoi.js/blob/v6/.github/CONTRIBUTING.md)
 
 ### 🧑‍💻 Aoi.js
 
-[![AkaruiDevelopment/aoi.js](https://contrib.rocks/image?repo=AkaruiDevelopment/aoi.js)](https://github.com/AkaruiDevelopment/aoi.js)
+[![aoijs/aoi.js](https://contrib.rocks/image?repo=aoijs/aoi.js)](https://github.com/aoijs/aoi.js)
 
 ### 📄 Documentation
 

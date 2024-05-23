@@ -25,8 +25,8 @@ $hasPerms[guildID;userID;...perms]
 | Permission              |                                                                 |
 | ----------------------- | --------------------------------------------------------------- |
 | createinvite            | Permission to create guild invites                              |
-| kick                    | Permission to kick guild members                                |
-| ban                     | Permission to ban guild members                                 |
+| kickmembers             | Permission to kick guild members                                |
+| banmembers              | Permission to ban guild members                                 |
 | administrator           | Administrator Permissions                                       |
 | managechannel           | Permission to manage guild channels                             |
 | manageguild             | Permissions to modify server settings                           |
@@ -73,8 +73,8 @@ This will return `true` when the author has `kick` permissions and return `false
 
 ```javascript
 client.command({
-  name: "hasPerms",
-  code: `
+    name: "hasPerms",
+    code: `
   $hasPerms[$guildID;$authorID;kick]
   `
 });

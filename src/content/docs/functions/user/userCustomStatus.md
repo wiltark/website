@@ -26,9 +26,9 @@ This will return your status text if you have any:
 
 ```javascript
 client.command({
-  name: "userCustomStatus",
-  code: `
-  $userCustomStatus[$authorID;$guildID;state]
+    name: "userCustomStatus",
+    code: `
+  $userCustomStatus[$guildID;$authorID;state]
   `
 });
 ```
