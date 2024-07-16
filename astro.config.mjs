@@ -7,7 +7,6 @@ import sitemap from "@astrojs/sitemap";
 import starlightLinksValidator from "starlight-links-validator";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightDocSearch from "@astrojs/starlight-docsearch";
-import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 export default defineConfig({
   site: "https://aoi.js.org",
@@ -18,6 +17,7 @@ export default defineConfig({
     starlight({
       head: [{ tag: "script", attrs: { src: "/preserve-sidebar.js" } }],
       lastUpdated: true,
+      credits: true,
       plugins: [
         starlightLinksValidator(),
         starlightImageZoom(),
@@ -26,15 +26,6 @@ export default defineConfig({
           indexName: "aoi-js",
           apiKey: "775caf3aef9ecccc83a7b3948ac1b92f",
         }),
-        starlightUtils({
-          navLinks: {
-            leading: { useSidebarLabelled: "leadingNavLinks" },
-          },
-        }),
-        /*  starlightVersions({
-              versions: [{ slug: '6.8' }],
-            }),
-        */
       ],
       title: "aoi.js",
       favicon: "/favicon.ico",
@@ -75,16 +66,8 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "leadingNavLinks",
-          items: [
-            { label: "Docs", link: "/functions/abbreviate" },
-            { label: "Guides", link: "/guides/setup" },
-            { label: "Extensions", link: "/extensions/aoijs/aoicanvas" },
-          ],
-        },
-        {
           label: "Get Started",
-          link: "/guides/setup",
+          link: "/guides",
         },
         {
           label: "Guides",
@@ -228,7 +211,6 @@ export default defineConfig({
               collapsed: true,
             },
           ],
-          collapsed: true,
         },
         {
           label: "Tools",
@@ -236,14 +218,13 @@ export default defineConfig({
             {
               label: "Application Command Creator",
               link: "/tools/slash",
-              collapsed: true,
             },
           ],
         },
         {
           label: "Functions",
           autogenerate: {
-            directory: "functions/",
+            directory: "/functions/",
           },
           collapsed: true,
         },
