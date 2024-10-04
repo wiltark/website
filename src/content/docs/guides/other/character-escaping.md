@@ -2,8 +2,6 @@
 title: Character Escaping
 description: This page explains character escaping and provides a table of commonly used escape sequences.
 type: guide
-author: "Fafa"
-author_url: "https://raw.githubusercontent.com/aoijs/website/main/src/images/contributors/fafa.png"
 id: character-escaping
 og_image: https://raw.githubusercontent.com/aoijs/website/main/src/images/og/11.png
 ---
@@ -12,10 +10,11 @@ og_image: https://raw.githubusercontent.com/aoijs/website/main/src/images/og/11.
 
 ## Table of Contents
 
--   [What is character escaping?](#what-is-character-escaping)
--   [When to use character escaping](#when-to-use-character-escaping)
--   [Commonly used escape sequences](#commonly-used-escape-sequences)
--   [Examples](#examples)
+- [Table of Contents](#table-of-contents)
+- [What is character escaping?](#what-is-character-escaping)
+- [When to use character escaping](#when-to-use-character-escaping)
+- [Commonly used escape sequences](#commonly-used-escape-sequences)
+- [Examples](#examples)
 
 ## What is character escaping?
 

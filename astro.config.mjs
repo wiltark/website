@@ -15,7 +15,6 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      head: [{ tag: "script", attrs: { src: "/preserve-sidebar.js" } }],
       customCss: ["./src/styles/custom.css"],
       lastUpdated: false,
       plugins: [
@@ -24,7 +23,7 @@ export default defineConfig({
         starlightDocSearch({
           appId: "7NDV3UYBW5",
           indexName: "aoi-js",
-          apiKey: "775caf3aef9ecccc83a7b3948ac1b92f",
+          apiKey: "56086da80cd1e86f4400ac102f0131c1",
         }),
       ],
       title: "aoi.js",
@@ -45,9 +44,28 @@ export default defineConfig({
         PageTitle: "./src/components/Page/PageTitle.astro",
         PageSidebar: "./src/components/Page/PageSidebar.astro",
         Sidebar: "./src/components/Page/Sidebar.astro",
+        Pagination: './src/components/Page/Pagination.astro',
       },
       pagefind: false,
       head: [
+        // Google Analytics, Anonymized (for the user)
+        {
+          tag: "script",
+          attrs: {
+            async: true,
+            src: "https://www.googletagmanager.com/gtag/js?id=G-GMH27HJZGY",
+          },
+        },
+        {
+          tag: "script",
+          content: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-GMH27HJZGY');
+          `,
+        },
         {
           tag: "meta",
           attrs: {
@@ -217,10 +235,6 @@ export default defineConfig({
             {
               label: "Application Command Creator",
               link: "/tools/slash",
-            },
-            {
-              label: "Github Changelogs",
-              link: "/changelogs",
             },
           ],
         },
